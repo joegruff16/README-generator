@@ -16,10 +16,13 @@ const questions = [
     {
         type: 'input',
         name: 'project title',
-        message: "What's the title of your project for your README?"
+        message: "What's the title of your project for your README?",
         validate(answer) {
-            if (answer === "")
-                return 'You must enter a title.';
+            if (answer === "") {
+                return 'You must enter a title';
+            } else {
+                return true;
+            }
         }
 
     },
@@ -27,31 +30,66 @@ const questions = [
     {
         type: 'input',
         text: 'description',
-        message: "Describe what your project is all about and how it works"
+        message: "Describe what your project is all about and how it works",
+        validate(answer) {
+            if (answer === "") {
+                return 'You must enter a description about your project';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
         type: 'input',
         text: 'installation',
-        message: "Provide instructions on how to install your app"
+        message: "Provide instructions on how to install your app",
+        validate(answer) {
+            if (answer === "") {
+                return 'You must enter installation instructions';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
         type: 'input',
         text: 'usage',
-        message: ""
+        message: "What technologies did you use for this project",
+        validate(answer) {
+            if (answer === "") {
+                return 'You must enter the usage information';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
         type: 'input',
         text: 'contribution',
-        message: ""
+        message: "Explain how other developers could contribute to your project",
+        validate(answer) {
+            if (answer === "") {
+                return 'Please enter a valid response about how others could contribute to your project';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
         type: 'input',
         text: 'test',
-        message: ""
+        message: "Explain in detail about the tests you wrote for your app",
+        validate(answer) {
+            if (answer === "") {
+                return 'Please enter information about the tests you wrote for your app';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
@@ -66,13 +104,27 @@ const questions = [
     {
         type: 'input',
         text: 'Questions',
-        message: 'Enter your Github username'
+        message: 'Enter your Github username',
+        validate(answer) {
+            if (answer === "") {
+                return 'Please enter a valid Github username';
+            } else {
+                return true;
+            }
+        }
     },
 
     {
         type: 'input',
         text: 'Questions',
-        message: 'Enter your email address'
+        message: 'Enter your email address',
+        validate(answer) {
+            if (answer === "") {
+                return 'You must enter a valid email address';
+            } else {
+                return true;
+            }
+        }
     }
 
 
