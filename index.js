@@ -1,13 +1,13 @@
 // How do these functions break down and how can I make them simple and small
 
 // TODO: Include packages needed for this application
-// This can be developed by reading the inquire documentation
-// const inquire = require('./utils/generateMarkdown');
-// inquire
+// Trying to use path to see if that will help me finish the writeToFile function
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('node:path');
 const generateMarkdown = require('./utils/generateMarkdown');
+
 
 
 // TODO: Create an array of questions for user input
