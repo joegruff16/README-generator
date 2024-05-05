@@ -6,8 +6,8 @@ console.log(`Program is starting...`)
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { // Section when you type license this is the function that will add a license badge
 
-  if (license) const noLicense = '';
-  return LicenseBadge;
+  // if (license) const noLicense = '';
+  // return LicenseBadge;
 }
 
 
@@ -52,9 +52,7 @@ function generateMarkdown(data) {
   ## Questions
   ${Questions}
 
-
-
-  return `# ${ data.title }
+  return # ${data.title}`
 
 
 }

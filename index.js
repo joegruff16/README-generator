@@ -2,19 +2,26 @@
 
 // TODO: Include packages needed for this application
 // This can be developed by reading the inquire documentation
-const markDown = require('./utils/generateMarkdown');
-markDown
+// const inquire = require('./utils/generateMarkdown');
+// inquire
 
 const fs = require('node:fs/promises');
 
 
 // TODO: Create an array of questions for user input
 // User will be prompted to fill in this data which will display on their README
+const inquire = require('./utils/generateMarkdown');
+inquire
 const questions = [
     {
         type: 'input',
         name: 'project title',
         message: "What's the title of your project for your README?"
+        validate(answer) {
+            if (answer === "")
+                return 'You must enter a title.';
+        }
+
     },
 
     {
@@ -45,7 +52,29 @@ const questions = [
         type: 'input',
         text: 'test',
         message: ""
+    },
+
+    {
+        type: 'list',
+        text: 'License',
+        message: 'What license do you want to use?',
+        choices: [
+            'Apache', 'BSD 2', 'BSD 3', 'General Public', 'Lesser General Public', 'MIT', 'Mozilla Public'
+        ],
+    },
+
+    {
+        type: 'input',
+        text: 'Questions',
+        message: 'Enter your Github username'
+    },
+
+    {
+        type: 'input',
+        text: 'Questions',
+        message: 'Enter your email address'
     }
+
 
 ];
 
