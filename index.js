@@ -5,13 +5,13 @@
 // const inquire = require('./utils/generateMarkdown');
 // inquire
 
-const fs = require('node:fs/promises');
+const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 
 // TODO: Create an array of questions for user input
 // User will be prompted to fill in this data which will display on their README
-const inquire = require('./utils/generateMarkdown');
-inquire
 const questions = [
     {
         type: 'input',
@@ -136,7 +136,7 @@ inquirer.prompt(questions).then((answers) => {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile
 }
 writeToFile();
 // TODO: Create a function to initialize app

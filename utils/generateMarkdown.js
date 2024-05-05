@@ -21,39 +21,37 @@ function renderLicenseSection(license) { }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const template = `# ${data.title};
+  return `# ${data.title}
+  
 
   #Title of the Project
-  - [Description](#Description)
-  - [Table of Contents](#TableofContents)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributing](#Contributions)
-  - [Tests](#Tests)
-  - [Questions](#Questions)
+  - [Description](#description)
+  - [Table of Contents](#tableofContents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributions)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
 
   #Title of the Project
   ## Description
-  ${Description}
+  ${data.description}
   ## Table of Contents
-  ${TableofContents}
+  ${data.tableofContents}
   ## Installation
-  ${Installation}
+  ${data.installation}
   ## Usage
-  ${Usage}
+  ${data.usage}
   ## License
-  ${License}
+  ${data.license}
   ## Contributing
-  ${Contributions}
+  ${data.contributions}
   ## Tests
-  ${Tests}
+  ${data.tests}
   ## Questions
-  ${Questions}
-
-  return # ${data.title}`
-
+  ${data.questions}`
 
 }
 console.log(`Program has ended...`)
