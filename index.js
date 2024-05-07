@@ -5,7 +5,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require('node:path');
+const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
@@ -13,23 +13,23 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 // User will be prompted to fill in this data which will display on their README
 const questions = [
+
     {
         type: 'input',
-        name: 'project title',
+        name: 'title',
         message: "What's the title of your project for your README?",
         validate(answer) {
-            if (answer === "") {
+            console.log(answer);
+            if (answer.length < 1) {
                 return 'You must enter a title';
-            } else {
-                return true;
             }
+            return true;
         }
-
     },
 
     {
         type: 'input',
-        text: 'description',
+        name: 'description',
         message: "Describe what your project is all about and how it works",
         validate(answer) {
             if (answer === "") {
@@ -42,7 +42,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'installation',
+        name: 'installation',
         message: "Provide instructions on how to install your app",
         validate(answer) {
             if (answer === "") {
@@ -55,7 +55,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'usage',
+        name: 'usage',
         message: "What technologies did you use for this project",
         validate(answer) {
             if (answer === "") {
@@ -68,7 +68,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'contribution',
+        name: 'contribution',
         message: "Explain how other developers could contribute to your project",
         validate(answer) {
             if (answer === "") {
@@ -81,7 +81,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'test',
+        name: 'test',
         message: "Explain in detail about the tests you wrote for your app",
         validate(answer) {
             if (answer === "") {
@@ -94,7 +94,7 @@ const questions = [
 
     {
         type: 'list',
-        text: 'License',
+        name: 'License',
         message: 'What license do you want to use?',
         choices: [
             'Apache', 'BSD 2', 'BSD 3', 'General Public', 'Lesser General Public', 'MIT', 'Mozilla Public'
@@ -103,7 +103,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'Questions',
+        name: 'questions',
         message: 'Enter your Github username',
         validate(answer) {
             if (answer === "") {
@@ -116,7 +116,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'Questions',
+        text: 'questions',
         message: 'Enter your email address',
         validate(answer) {
             if (answer === "") {
@@ -130,17 +130,20 @@ const questions = [
 
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    console.log(JSON.stringify(answers, null, '  '));
-});
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile
+    fs.writeFile() // Where is the file going to pass data , look upfs.writeFile + path, data node.js
 }
 writeToFile();
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        writeToFile("readmeTemplate.md", generateMarkdown(...answers));
+        console.log(JSON.stringify(answers, null, '  '));
+    });
+};
 
 // Function call to initialize app
 init();
