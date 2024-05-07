@@ -116,7 +116,7 @@ const questions = [
 
     {
         type: 'input',
-        text: 'questions',
+        name: 'questions',
         message: 'Enter your email address',
         validate(answer) {
             if (answer === "") {
