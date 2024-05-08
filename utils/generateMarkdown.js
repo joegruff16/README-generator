@@ -13,7 +13,12 @@ function renderLicenseBadge(license) { // Section when you type license this is 
 // This will be the lincense link for all of the licenses
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  // const licenseLink = 
+
+
+};
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string

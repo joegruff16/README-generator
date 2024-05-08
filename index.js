@@ -18,77 +18,42 @@ const questions = [
         type: 'input',
         name: 'title',
         message: "What's the title of your project for your README?",
-        validate(answer) {
-            if (answer < 1) {
-                return console.log('You must enter a title');
-            }
-            return true;
-        }
+
     },
 
     {
         type: 'input',
         name: 'description',
         message: "Describe what your project is all about and how it works",
-        validate(answer) {
-            if (answer === "") {
-                return 'You must enter a description about your project';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
         type: 'input',
         name: 'installation',
         message: "Provide instructions on how to install your app",
-        validate(answer) {
-            if (answer === "") {
-                return 'You must enter installation instructions';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
         type: 'input',
         name: 'usage',
         message: "What technologies did you use for this project",
-        validate(answer) {
-            if (answer === "") {
-                return 'You must enter the usage information';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
         type: 'input',
         name: 'contribution',
         message: "Explain how other developers could contribute to your project",
-        validate(answer) {
-            if (answer === "") {
-                return 'Please enter a valid response about how others could contribute to your project';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
         type: 'input',
         name: 'test',
         message: "Explain in detail about the tests you wrote for your app",
-        validate(answer) {
-            if (answer === "") {
-                return 'Please enter information about the tests you wrote for your app';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
@@ -104,28 +69,15 @@ const questions = [
         type: 'input',
         name: 'questions',
         message: 'Enter your Github username',
-        validate(answer) {
-            if (answer === "") {
-                return 'Please enter a valid Github username';
-            } else {
-                return true;
-            }
-        }
+
     },
 
     {
         type: 'input',
         name: 'questions',
         message: 'Enter your email address',
-        validate(answer) {
-            if (answer === "") {
-                return 'You must enter a valid email address';
-            } else {
-                return true;
-            }
-        }
-    }
 
+    }
 
 ];
 
@@ -151,7 +103,7 @@ function init() {
         writeToFile("READMEtemplate.md", generateMarkdown(answers));
         console.log(JSON.stringify(answers, null, '  '));
     });
-    console.log(init()`Is this code working?`);
+    // console.log(init()`Is this code working?`);
 };
 
 // Function call to initialize app
