@@ -19,9 +19,8 @@ const questions = [
         name: 'title',
         message: "What's the title of your project for your README?",
         validate(answer) {
-            console.log(answer);
-            if (answer.length < 1) {
-                return 'You must enter a title';
+            if (answer < 1) {
+                return console.log('You must enter a title');
             }
             return true;
         }
@@ -134,15 +133,25 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile() // Where is the file going to pass data , look upfs.writeFile + path, data node.js
+    const filePath = `./utils/${fileName}`;
+    fs.writeFile(filePath, data, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log(`${fileName} was successfully created.`);
+    });
 }
-writeToFile();
+const fileName = 'READMEtemplate.md';
+const data = 'This the content you created for your README file.';
+writeToFile(fileName, data);
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        writeToFile("readmeTemplate.md", generateMarkdown(...answers));
+        writeToFile("READMEtemplate.md", generateMarkdown(answers));
         console.log(JSON.stringify(answers, null, '  '));
     });
+    console.log(init()`Is this code working?`);
 };
 
 // Function call to initialize app
