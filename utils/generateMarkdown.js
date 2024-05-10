@@ -57,7 +57,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  ${data.questions} 
+  If you have any questions you can reach me at ${data.email} or ${data.github}
 `
 } // Pass in actual questions from index.js above for email, gitHub etc
 console.log(`Program has ended...`)

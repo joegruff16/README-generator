@@ -1,4 +1,4 @@
-# Joseph
+# READMe Generator
 
   ## Table of Contents
   - [Description](#description)
@@ -11,22 +11,22 @@
 
 
   ## Description
-  j
+  This CLI app in the CLI sends the user questions and the answers that the users inputs into the prompts develops a README file that is generated within the util folder
 
   ## Installation
-  k
+  .
 
   ## Usage
-  plau
+  node.js and JS
 
   ## License
   undefined
 
   ## Contributing
-  undefined
+  .
 
   ## Tests
   undefined
 
   ## Questions
-  joegruff16 
+  If you have any questions you can reach me at joegruff16@gmail.com or joegruff16
