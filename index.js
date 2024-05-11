@@ -61,7 +61,7 @@ const questions = [
         name: 'License',
         message: 'What license do you want to use?',
         choices: [
-            'Apache', 'BSD 2', 'BSD 3', 'General Public', 'Lesser General Public', 'MIT', 'Mozilla Public'
+            'Apache', 'BSD 2', 'BSD 3', 'GPL v3', 'MIT', 'Mozilla Public'
         ],
     },
 
@@ -86,7 +86,10 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     const filePath = `./utils/${fileName}`;
-    fs.writeFile(filePath, data, (err) => {
+    // Convert data to a string if it's not already a string
+    // Convert data to a string if it's not already a string
+    const stringData = data.toString();
+    fs.writeFile(filePath, stringData, (err) => {
         if (err) {
             console.error(err);
             return;
