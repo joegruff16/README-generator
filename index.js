@@ -88,9 +88,8 @@ const questions = [
 function writeToFile(fileName, data) {
     const filePath = `./utils/${fileName}`;
     // Convert data to a string if it's not already a string
-    // Used Xpert Learning assistant to find this code below as I kept returning a README with object object and no other data
+    // Used Xpert Learning assistant to find this code below as I kept getting an object object for the data after the README file was created
     const stringData = data.toString();
-    const markdown = generateMarkdown(data);
     fs.writeFile(filePath, stringData, (err) => {
         if (err) {
             console.error(err);

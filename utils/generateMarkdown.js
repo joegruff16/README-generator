@@ -43,15 +43,16 @@ function renderLicenseBadge(license) { // Section when you type license this is 
 const licenseData = renderLicenseBadge(data.license);
 data.licenseBadge = licenseData.badge;
 data.licenseUrl = licenseData.url;
+
 // const markdown = generateMarkdown(data);
-// const { badge, url } = renderLicenseBadge(license);
-// console.log(badge);
-// console.log(url);
-// renderLicenseBadge();
+const { badge, url } = renderLicenseBadge(license);
+console.log(badge);
+console.log(url);
+renderLicenseBadge();
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const markdown = `
+  return `# ${data.title}
 
   ## License Badge
   License: ${data.licenseBadge}
@@ -84,11 +85,7 @@ function generateMarkdown(data) {
 
   ## Questions
   If you have any questions you can reach me at my email ${data.email} or you can find me on github at ${data.github}`;
-  return markdown;
-
-}
-
-// Pass in actual questions from index.js above for email, gitHub etc
+} // Pass in actual questions from index.js above for email, gitHub etc
 // Collaborated with a TA and a fellow student for help figuring out the Questions section above
 console.log(`Program has ended...`);
 
