@@ -11,8 +11,8 @@ function renderLicenseBadge(license) { // Section when you type license this is 
   let licenseBadge;
   let licenseUrl;
 
-  const renderLicenseBadge = { key: 'value' };
-  const keyValue = renderLicenseBadge.key;
+  // const renderLicenseBadge = { key: 'value' };
+  // const keyValue = renderLicenseBadge.key;
 
   switch (license) {
     case 'Apache 2.0':
@@ -36,19 +36,29 @@ function renderLicenseBadge(license) { // Section when you type license this is 
       licenseUrl = 'https://opensource.org/licenses/MPL-2.0';
       break;
   };
-  console.log(renderLicenseBadge)
   console.log('Does this work')
-  return { badge: licenseBadge, url: licenseUrl, key: keyValue };
-
+  return { badge: licenseBadge, url: licenseUrl };
 };
 
-renderLicenseBadge();
+const licenseData = renderLicenseBadge(data.license);
+data.licenseBadge = licenseData.badge;
+data.licenseUrl = licenseData.url;
+// const markdown = generateMarkdown(data);
+// const { badge, url } = renderLicenseBadge(license);
+// console.log(badge);
+// console.log(url);
+// renderLicenseBadge();
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const markdown = `
+
+  ## License Badge
+  License: ${data.licenseBadge}
 
   ## Table of Contents
+  - [License](#license)
+  - [Title](#title)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -56,7 +66,6 @@ function generateMarkdown(data) {
   - [Contributing](#contributions)
   - [Tests](#tests)
   - [Questions](#questions)
-
 
   ## Description
   ${data.description}
@@ -67,9 +76,6 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## License
-  ${data.license}
-
   ## Contributing
   ${data.contributing}
 
@@ -77,8 +83,20 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  If you have any questions you can reach me at ${data.email} or ${data.github}`;
-} // Pass in actual questions from index.js above for email, gitHub etc
-console.log(`Program has ended...`)
+  If you have any questions you can reach me at my email ${data.email} or you can find me on github at ${data.github}`;
+  return markdown;
+
+}
+
+// Pass in actual questions from index.js above for email, gitHub etc
+// Collaborated with a TA and a fellow student for help figuring out the Questions section above
+console.log(`Program has ended...`);
+
 module.exports = generateMarkdown;
+
+// ## License
+// ${data.license}
+// You have selected the ${data.license} license!
+// [![License:](${data.licenseBadge})]
+// (${data.licenseUrl})
 // module.exports = renderLicenseBadge;

@@ -12,6 +12,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 // User will be prompted to fill in this data which will display on their README
+// Had an infinite loop that I couldn't figure out how to get rid of because of an If statement under value. Worked with a fellow student who confirmed my thinking to remove the if statement
 const questions = [
 
     {
@@ -87,8 +88,9 @@ const questions = [
 function writeToFile(fileName, data) {
     const filePath = `./utils/${fileName}`;
     // Convert data to a string if it's not already a string
-    // Convert data to a string if it's not already a string
+    // Used Xpert Learning assistant to find this code below as I kept returning a README with object object and no other data
     const stringData = data.toString();
+    const markdown = generateMarkdown(data);
     fs.writeFile(filePath, stringData, (err) => {
         if (err) {
             console.error(err);
