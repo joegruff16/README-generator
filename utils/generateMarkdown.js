@@ -8,8 +8,8 @@ console.log(`Program is starting...`)
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { // Section when you type license this is the function that will add a license badge
-  let licenseBadge;
-  let licenseUrl;
+  let licenseBadge = '';
+  let licenseUrl = '';
 
   // const renderLicenseBadge = { key: 'value' };
   // const keyValue = renderLicenseBadge.key;
@@ -40,22 +40,22 @@ function renderLicenseBadge(license) { // Section when you type license this is 
   return { badge: licenseBadge, url: licenseUrl };
 };
 
-const licenseData = renderLicenseBadge(data.license);
-data.licenseBadge = licenseData.badge;
-data.licenseUrl = licenseData.url;
+// const licenseData = renderLicenseBadge(data.license);
+// data.licenseBadge = licenseData.badge;
+// data.licenseUrl = licenseData.url;
 
 // const markdown = generateMarkdown(data);
-const { badge, url } = renderLicenseBadge(license);
-console.log(badge);
-console.log(url);
-renderLicenseBadge();
+// const { badge, url } = renderLicenseBadge(license);
+// console.log(badge);
+// console.log(url);
+// renderLicenseBadge();
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
   ## License Badge
-  License: ${data.licenseBadge}
+  License: ${renderLicenseBadge(data.licenseBadge)}
 
   ## Table of Contents
   - [License](#license)
@@ -64,7 +64,7 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
-  - [Contributing](#contributions)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
@@ -76,6 +76,10 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
+
+  ## License
+  ${renderLicenseBadge(data.license)}
+  My project license is with ${data.license}
 
   ## Contributing
   ${data.contributing}
