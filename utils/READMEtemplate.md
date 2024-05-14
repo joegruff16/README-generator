@@ -1,7 +1,7 @@
 # Joe
 
   ## License Badge
-  License: [object Object]
+  ![gitHub license](https://img.shields.io/badge/Apache_2.0-blue)
 
   ## Table of Contents
   - [License](#license)
@@ -15,23 +15,22 @@
   - [Questions](#questions)
 
   ## Description
-  Me
+  Yes
 
   ## Installation
-  I can do this
+  Okay
 
   ## Usage
-  So can you
+  yes
 
   ## License
-  [object Object]
-  My project license is with undefined
+  ![gitHub license](https://img.shields.io/badge/Apache_2.0-blue)
 
   ## Contributing
-  undefined
+  no
 
   ## Tests
-  undefined
+  ll
 
   ## Questions
   If you have any questions you can reach me at my email joegruff16@gmail.com or you can find me on github at joegruff16

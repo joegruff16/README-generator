@@ -45,24 +45,24 @@ const questions = [
 
     {
         type: 'input',
-        name: 'contributions',
+        name: 'contributing',
         message: "Explain how other developers could contribute to your project",
 
     },
 
     {
         type: 'input',
-        name: 'test',
+        name: 'tests',
         message: "Explain in detail about the tests you wrote for your app",
 
     },
 
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'What license do you want to use?',
         choices: [
-            'Apache', 'BSD 2', 'BSD 3', 'GPL v3', 'MIT', 'Mozilla Public'
+            'Apache_2.0', 'BSD_2', 'BSD_3', 'MIT'
         ],
     },
 
@@ -86,11 +86,12 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    console.log(data);
     const filePath = `./utils/${fileName}`;
     // Convert data to a string if it's not already a string
     // Used Xpert Learning assistant to find this code below as I kept getting an object object for the data after the README file was created
-    const stringData = data.toString();
-    fs.writeFile(filePath, stringData, (err) => {
+    // const stringData = data.toString();
+    fs.writeFile(filePath, data, (err) => {
         if (err) {
             console.error(err);
             return;
@@ -98,9 +99,9 @@ function writeToFile(fileName, data) {
         console.log(`${fileName} was successfully created.`);
     });
 }
-const fileName = 'READMEtemplate.md';
-const data = 'This the content you created for your README file.';
-writeToFile(fileName, data);
+// const fileName = 'READMEtemplate.md';
+// const data = 'This the content you created for your README file.';
+// writeToFile(fileName, data);
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
