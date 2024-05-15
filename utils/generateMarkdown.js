@@ -7,6 +7,7 @@
 console.log(`Program is starting...`)
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+// TA helped me to simplify my code here. I originally had a switch which wasn't necessary tha included all the links and badges for each license
 function renderLicenseBadge(license) { // Section when you type license this is the function that will add a license badge
 
   if (license !== 'None') {
@@ -16,7 +17,7 @@ function renderLicenseBadge(license) { // Section when you type license this is 
 }
 
 
-// TODO: Create a function to generate markdown for README
+// TODO: Create a function to generate markdown for README - this is the README template
 function generateMarkdown(data) {
 
   return `# ${data.title}
@@ -25,8 +26,7 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
-  - [License](#license)
-  - [Title](#title)
+
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -60,10 +60,3 @@ function generateMarkdown(data) {
 console.log(`Program has ended...`);
 
 module.exports = generateMarkdown;
-
-// ## License
-// ${data.license}
-// You have selected the ${data.license} license!
-// [![License:](${data.licenseBadge})]
-// (${data.licenseUrl})
-// module.exports = renderLicenseBadge;

@@ -2,7 +2,7 @@
 
 ## Description
 
-This CLI app generates a README file for you by prompting the user to request what they would like to include in their README file. The design is a professional README template and when you answer all the prompts it creates a new README file. 
+This CLI app generates a README file for you by prompting the user to request what they would like to include in their README file. The design is a professional README template and when you answer all the prompts it creates a new README file in the utlilities folder. 
 
 ## Finished Product 
 
