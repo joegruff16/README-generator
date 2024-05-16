@@ -6,7 +6,21 @@ This CLI app generates a README file for you by prompting the user to request wh
 
 ## Finished Product 
 
-!["README-generator"](./assets/images/task-tracker-screen-shot.png "")
+This is the debugger control panel
+
+!["UsetheDebugger"](./assets/images/debugger-control-panel.png "This is the debugger control panel")
+
+This where you would select the debugger terminal in vs code so that you could start the app
+
+!["UsetheDebugger"](./assets/images/debugger-terminal.png "This is the debugger terminal")
+
+This is where you would select the debugger CLI at the bottom right of your vs code
+
+!["UsetheDebugger"](./assets/images/debugger-terminal2.png "This is the debugger terminal")
+
+If you followed all of the starts correctly this is how it should look when the app starts
+
+!["UsetheDebugger"](./assets/images/start-of-app.png "This is the debugger terminal")
 
 ## Usage
 
@@ -18,8 +32,15 @@ This CLI app generates a README file for you by prompting the user to request wh
 
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
-## Live Link
+## Video Link
+
+<https://drive.google.com/file/d/1MAO8WeRaZEF33g-9OGFgCLPYfATlJF2c/view?usp=sharing>
 
 ## GitHub Repo
 
+<https://github.com/joegruff16/README-generator>
+
 ## Credits
+
+- Used this website to help with generating my license badges
+    - **<https://shields.io/badges>**

@@ -1,7 +1,7 @@
 # README-generator
 
   ## License Badge
-  ![gitHub license](https://img.shields.io/badge/Apache_2.0-blue)
+  ![gitHub license](https://img.shields.io/badge/BSD_2-blue)
 
   ## Table of Contents
 
@@ -14,22 +14,22 @@
   - [Questions](#questions)
 
   ## Description
-  This CLI app when installed will prompt the user a series of questions that will build their very own README template that will display in the utility folder. 
+  This is a CLI app that generators a professional README file within the utility folder after the user answers all of the prompts.
 
   ## Installation
-  First, type npm i in your CLI. Make sure you are in the correct folder of the project before doing so.  Then to run the app type node index.js
+  First, the user must type npm i to install inquirer in their CLI. Next, in oder to run the application type node index.js
 
   ## Usage
   JS and node.js
 
   ## License
-  ![gitHub license](https://img.shields.io/badge/Apache_2.0-blue)
+  ![gitHub license](https://img.shields.io/badge/BSD_2-blue)
 
   ## Contributing
-  Please let me know how I can simplify and clean up my code. Also provide suggestions about how I can make this app better!
+  I would appreciate it if other developers helped me understand how to simplify the code and also help to make this app better.
 
   ## Tests
-  I wrote one test in the index.js  within the write file function. This will catch any errors. 
+  One test was writen under the writeFile function within index.js. This function tracks for an error and will display the error otherwise it will notify you that the file was successfully created. 
 
   ## Questions
   If you have any questions you can reach me at my email joegruff16@gmail.com or you can find me on github at joegruff16
